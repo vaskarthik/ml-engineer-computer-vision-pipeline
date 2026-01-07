@@ -28,3 +28,13 @@ By the end of this project, I aim to demonstrate full ownership of an ML system 
 
 ---
 Progress will be updated daily via commits.
+
+
+## Repository Structure
+
+data/           - Raw and processed datasets  
+training/       - Python (PyTorch) training and evaluation  
+inference_cpp/  - C++ inference using OpenCV and ONNX Runtime  
+db/             - MongoDB schemas and experiment metadata  
+scripts/        - Utility scripts  
+docs/           - Design notes and documentation
