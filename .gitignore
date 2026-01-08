@@ -1,0 +1,46 @@
+# ============================
+# DATASETS (NEVER COMMIT)
+# ============================
+data/raw/
+data/processed/images/
+data/processed/labels/
+
+# Dataset archives
+*.zip
+*.tar
+*.tar.gz
+
+# ============================
+# MODEL ARTIFACTS
+# ============================
+*.pt
+*.onnx
+*.engine
+
+# ============================
+# PYTHON
+# ============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+
+# ============================
+# JUPYTER / COLAB
+# ============================
+.ipynb_checkpoints/
+
+# ============================
+# IDE / EDITOR
+# ============================
+.vscode/
+.idea/
+
+# ============================
+# OS
+# ============================
+.DS_Store
+Thumbs.db
