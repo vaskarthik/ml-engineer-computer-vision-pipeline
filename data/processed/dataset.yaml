@@ -1,6 +1,11 @@
-path: data/processed
+path: /content/datasets/processed
+
 train: images/train
 val: images/val
+test: images/test
 
 nc: 3
-names: ['person', 'vehicle', 'animal']
+names:
+  - person
+  - vehicle
+  - animal
