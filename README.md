@@ -1,40 +1,180 @@
-# ML Engineer – Vision Pipeline (30-Day Execution Plan)
-
-This repository documents my transition from **Computer Vision Engineer** to **Machine Learning Engineer** by building a complete, production-oriented ML system.
-
-## Objective
-Build an end-to-end Machine Learning pipeline covering:
-- Dataset preparation and versioning
-- Model training in Python (PyTorch)
-- Model export using ONNX
-- High-performance inference in C++ (OpenCV + ONNX Runtime)
-- Experiment tracking using MongoDB
-
-## Technology Stack
-- Python, PyTorch
-- C++, OpenCV, ONNX Runtime
-- MongoDB
-- GitHub (daily commits)
-- VS Code
-
-## Execution Plan (High Level)
-- **Week 1:** Dataset preparation, MongoDB integration, PyTorch training basics
-- **Week 2:** Model improvement, evaluation, ONNX export
-- **Week 3:** C++ inference pipeline with OpenCV
-- **Week 4:** System integration, optimization, documentation
-
-## Outcome
-By the end of this project, I aim to demonstrate full ownership of an ML system from data to deployment, aligned with real-world ML Engineer responsibilities.
+# 🚀 ML Engineer – Computer Vision Pipeline  
+### End-to-End Object Detection System (COCO → YOLO → FastAPI)
 
 ---
-Progress will be updated daily via commits.
+
+## 📌 Overview
+
+This project demonstrates a complete **machine learning engineering pipeline** for **object detection**, starting from raw dataset preparation to a deployed inference API.
+
+It highlights practical skills in:
+
+✔ Dataset preprocessing  
+✔ Annotation format conversion  
+✔ Deep learning model training  
+✔ Inference validation  
+✔ API-based ML deployment  
+
+---
+
+## 🎯 Project Objective
+
+To build a real-world **object detection pipeline**:
+Raw Dataset → Annotation Conversion → Model Training → Inference → Deployment
 
 
-## Repository Structure
 
-data/           - Raw and processed datasets  
-training/       - Python (PyTorch) training and evaluation  
-inference_cpp/  - C++ inference using OpenCV and ONNX Runtime  
-db/             - MongoDB schemas and experiment metadata  
-scripts/        - Utility scripts  
-docs/           - Design notes and documentation
+## 🧭 Development Workflow
+
+---
+
+### **1️⃣ Dataset Selection**
+- Dataset used: **COCO (Common Objects in Context)**
+- Rich multi-class object annotations
+- JSON-based bounding box format
+
+---
+
+### **2️⃣ Annotation Conversion**
+Converted dataset annotations: COCO JSON → YOLO TXT
+
+
+### **3️⃣ Model Training**
+Training performed on:
+
+🚀 **Google Colab (GPU Enabled)**
+
+Steps:
+
+✔ Uploaded processed dataset  
+✔ Configured YOLO training  
+✔ Trained custom detector  
+✔ Obtained trained weights  
+
+Output: best.pt
+
+### **4️⃣ Model Export**
+Downloaded trained weights and stored locally: models/best.pt
+
+### **5️⃣ Local Inference**
+Validated:
+
+✔ Model loading  
+✔ Detection accuracy  
+✔ Bounding box visualization  
+
+Generated:
+
+✔ Annotated detection images  
+
+---
+
+### **6️⃣ FastAPI Deployment**
+Wrapped inference pipeline using:
+
+⚡ **FastAPI**
+
+Features:
+
+✔ REST API endpoint  
+✔ Image upload support  
+✔ JSON detection response  
+✔ Annotated image saving  
+
+
+
+---
+
+## ⚙️ Environment Setup
+
+### **1️⃣ Clone Repository**
+
+```bash
+git clone https://github.com/vaskarthik/ml-engineer-computer-vision-pipeline.git
+cd ml-engineer-computer-vision-pipeline
+
+
+2️⃣ Create Virtual Environment
+python -m venv venv
+venv\Scripts\activate      # Windows
+source venv/bin/activate   # Linux / Mac
+
+3️⃣ Install Dependencies
+python -m pip install -r requirements.txt
+
+🧪 Run Local Inference
+python scripts/inference.py
+
+✔ Loads YOLO model
+✔ Runs detection
+✔ Saves annotated output
+
+
+🌐 Run FastAPI Server
+python -m uvicorn main:app --reload
+
+
+Server URL: http://127.0.0.1:8000
+
+
+Swagger UI: http://127.0.0.1:8000/docs
+
+
+
+📷 API Endpoint
+POST /predict/image
+
+Upload image → Receive:
+
+✔ Bounding boxes
+✔ Confidence scores
+✔ Class predictions
+✔ Annotated output
+
+
+🛠 Technologies Used
+
+Python
+
+Ultralytics YOLO
+
+OpenCV
+
+FastAPI
+
+Uvicorn
+
+Google Colab (GPU Training)
+
+
+
+💡 Key Skills Demonstrated
+
+✔ ML Pipeline Design
+✔ Dataset Annotation Conversion
+✔ YOLO Training
+✔ Model Export / Import
+✔ Inference Validation
+✔ API Deployment
+
+
+🚀 Future Enhancements
+
+✔ Video inference endpoint
+✔ Batch inference
+✔ Docker containerization
+✔ Cloud deployment
+✔ Performance optimization
+
+👨‍💻 Author
+
+Karthik Vas S
+Machine Learning / Computer Vision Engineer
+
+
+
+⭐ Takeaway
+
+This repository demonstrates a practical ML engineering workflow:
+
+✅ Data → Model → Deployment
