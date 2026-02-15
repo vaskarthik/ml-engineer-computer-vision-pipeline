@@ -111,7 +111,7 @@ python scripts/inference.py
 
 
 🌐 Run FastAPI Server
-python -m uvicorn main:app --reload
+python -m uvicorn api:app --reload
 
 
 Server URL: http://127.0.0.1:8000
